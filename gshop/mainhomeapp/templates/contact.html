@@ -1,0 +1,349 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G-shop Home</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .nav-link{
+            font-size: 23px;
+            font-weight: bolder;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .dropdown-menu{
+            background-color: black;
+            width: 300px;
+            height: 300px;
+            border-radius: 10px;
+        }
+
+        .dropdown-item{
+            color: white;
+            font-size: 20px;
+        }
+
+        .dropdown-item:hover{
+            background-color: gold;
+        }
+
+        .btn-dark{
+            border-radius: 100px;
+            width: 120px;
+        }
+
+        .btn-dark:hover{
+            background-color: red;
+            border: red;
+        }
+
+        .image{
+            width: 270px;
+            height: 250px;
+            margin-top: 200px;
+            margin-bottom: 100px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+
+        .form{
+            margin-top: 200px;
+            margin-bottom: 100px;
+            padding-top: 30px;
+            padding-bottom: 50px;
+            padding-left: 30px;
+            padding-right: 30px;
+            border-radius: 10px;
+            background-color: lightblue;
+        }
+
+        .form-heading{
+            color: black;
+            font-weight: bolder;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .btn-success{
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            width: 200px;
+        }
+
+        .container-1{
+            background-color: darkblue;
+            height: 110px;
+            margin-bottom: -100px;
+            margin-top: 100px;
+        }
+
+        .image-2{
+            width: 180px;
+            margin-top: 100px;
+            margin-bottom: -150px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+
+        .image-2:hover{
+            zoom: 95%;
+        }
+
+        .footer{
+            background-color: black;
+            color: white;
+            margin-top: 100px;
+        }
+
+        .logo{
+            width: 130px;
+            margin-top: 50px;
+            padding-bottom: 100px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+
+        .footer-heading{
+            color: grey;
+            margin-top: 50px;
+            font-weight: lighter;
+            margin-left: 20px;
+        }
+
+        .footer-link{
+            margin-left: 20px;
+            color: white;
+        }
+
+        .footer-link:hover{
+            color: white;
+        }
+    </style>
+
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
+        <a class="navbar-brand" href="#"><img src="{% static 'images/gshop_main/gshop_logo.png' %}" width="120px"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'main_home' %}">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'about' %}">About</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                  Signup
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Admin</a>
+                  <a class="dropdown-item" href="#">User</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                  Login
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Admin</a>
+                  <a class="dropdown-item" href="#">User</a>
+                </div>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <button class="btn btn-dark my-2 my-sm-0" type="submit">Logout</button>
+          </form>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-3 col-lg-3">
+                <img src="{% static 'images/gshop_main/contact.png' %}" class="image">
+            </div>
+
+            <div class="col-xs-2 col-lg-2"></div>
+
+            <div class="col-xs-5 col-lg-5">
+                <form action="" class="form">
+                    <h1 class="form-heading">Contact Us</h1>
+                    <input type="text" class="form-control" name="" id="name" placeholder="Name"><br>
+                    <label id="name_error"></label><br>
+                    <input type="text" class="form-control" name="" id="email" placeholder="Email Id"><br>
+                    <label id="email_error"></label><br>
+                    <input type="text" class="form-control" name="" id="phone" placeholder="Phone Number"><br>
+                    <label id="phone_error"></label><br>
+                    <textarea class="form-control" name="" id="message" placeholder="Message"></textarea><br>
+                    <label id="message_error"></label><br>
+                    <button class="btn btn-success" type="submit" onclick="return validation()">Enter</button>
+                </form>
+            </div>
+
+            <div class="col-xs-2 col-lg-2"></div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-lg-12">
+            <img src="{% static 'images/gshop_main/tree.png' %}" class="image-2">
+            <div class="container-1">
+            </div>
+        </div>
+    </div>
+   
+
+    
+    <div class="footer">
+        <div class="row">
+            <div class="col-xs-2 col-lg-2">
+                <img src="{% static 'images/gshop_main/gshop_logo.png' %}" class="logo">
+            </div>
+
+            <div class="col-xs-2 col-lg-2">
+                <h6 class="footer-heading">ABOUT</h6>
+                <a href="" class="footer-link">Contact Us</a><br>
+                <a href="" class="footer-link">About Us</a><br>
+                <a href="" class="footer-link">Careers</a><br>
+                <a href="" class="footer-link">G-shop Stories</a><br>
+            </div>
+
+            <div class="col-xs-2 col-lg-2">
+                <h6 class="footer-heading">HELP</h6>
+                <a href="" class="footer-link">Payments</a><br>
+                <a href="" class="footer-link">FAQ</a><br>
+            </div>
+
+            <div class="col-xs-2 col-lg-2">
+                <h6 class="footer-heading">POLICY</h6>
+                <a href="" class="footer-link">Terms Of Use</a><br>
+                <a href="" class="footer-link">Security</a><br>
+                <a href="" class="footer-link">Privacy</a><br>
+                <a href="" class="footer-link">Sitemap</a><br>
+            </div>
+
+            <div class="col-xs-2 col-lg-2">
+                <h6 class="footer-heading">Social Media</h6>
+                <a href="" class="footer-link">Instagram</a><br>
+                <a href="" class="footer-link">Twitter</a><br>
+                <a href="" class="footer-link">Youtube</a><br>
+            </div>
+            
+            
+
+            <div class="col-xs-2 col-lg-2">
+                <h6 class="footer-heading">Registered Office Address</h6>
+                <label class="footer-link">G-Shop Private Limited</label><br>
+                <label class="footer-link">CM Building</label><br>
+                <label class="footer-link">CM Tech Village</label><br>
+                <label class="footer-link">Pulvetta Road, Allum Kunnu</label><br>
+                <label class="footer-link">Karuvarakundu, 676523</label><br>
+                <label class="footer-link">Malappuram, Kerala</label><br>
+            </div>
+
+            <div class="col-xs-12 col-lg-12">
+                <hr color="grey">
+                <center>
+                <a href="" class="footer-link"><span class="fa fa-suitcase" style="color: gold;"></span> Become A User</a>
+                <label class="footer-link"><span class="fa fa-copyright"></span> 2019-2022 Gshop.com</label>
+                <a href="" class="footer-link"> <img src="{% static 'images/gshop_main/payment.svg' %}" width="200px"></a><br><br>
+                </center>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function validation(){
+            var status = 1
+            var name = document.getElementById('name')
+            var email = document.getElementById('email')
+            var phone = document.getElementById('phone')
+            var message = document.getElementById('message')
+
+            if(name.value == ""){
+                document.getElementById('name').style.borderColor="red"
+                document.getElementById('name_error').innerHTML="** Enter Your Name **"
+                document.getElementById('name_error').style.color="red"
+                document.getElementById('name_error').style.display="block"
+                status = 0
+            }
+
+            else{
+                document.getElementById('name').borderColor="black"
+                document.getElementById('name_error').style.display="none"
+                status = 1
+            }
+
+            if(email.value == ""){
+                document.getElementById('email').style.borderColor="red"
+                document.getElementById('email_error').innerHTML="** Enter Your Email Id **"
+                document.getElementById('email_error').style.color="red"
+                document.getElementById('email_error').style.display="block"
+                status = 0
+            }
+
+            else{
+                document.getElementById('email').borderColor="black"
+                document.getElementById('email_error').style.display="none"
+                status = 1
+            }
+
+            if(phone.value == ""){
+                document.getElementById('phone').style.borderColor="red"
+                document.getElementById('phone_error').innerHTML="** Enter Your Phone Number **"
+                document.getElementById('phone_error').style.color="red"
+                document.getElementById('phone_error').style.display="block"
+                status = 0
+            }
+
+            else{
+                document.getElementById('phone').borderColor="black"
+                document.getElementById('phone_error').style.display="none"
+                status = 1
+            }
+
+            if(message.value == ""){
+                document.getElementById('message').style.borderColor="red"
+                document.getElementById('message_error').innerHTML="** Enter Your Message **"
+                document.getElementById('message_error').style.color="red"
+                document.getElementById('message_error').style.display="block"
+                status = 0
+            }
+
+            else{
+                document.getElementById('message').borderColor="black"
+                document.getElementById('message_error').style.display="none"
+                status = 1
+            }
+
+            if(status == 1){
+                return true
+            }
+
+            if(status == 0){
+                return false
+            }
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</body>
+</html>

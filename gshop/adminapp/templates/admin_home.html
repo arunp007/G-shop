@@ -1,0 +1,376 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .nav-link{
+            font-size: 23px;
+            font-weight: bolder;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .dropdown-menu{
+            background-color: black;
+            width: 300px;
+            height: 300px;
+            border-radius: 10px;
+        }
+
+        .dropdown-item{
+            color: white;
+            font-size: 20px;
+        }
+
+        .dropdown-item:hover{
+            background-color: chartreuse;
+        }
+
+        .btn-dark{
+            border-radius: 100px;
+            width: 120px;
+        }
+
+        .btn-dark:hover{
+            background-color: red;
+            border: red;
+        }
+
+        .heading{
+            margin-top: 160px;
+            font-weight: bolder;
+            font-family: 'Times New Roman', Times, serif;
+            color: brown;
+        }
+
+        .grid1{
+            background-color: tomato;
+            color: white;
+            width: 250px;
+            height: 200px;
+            margin-top: 100px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            margin-bottom: 100px;
+        }
+
+        .grid-icon{
+            width: 100px;
+            height: 100px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            padding-top: 5px;
+        }
+
+        .grid-title{
+            text-align: center;
+            margin-top: 20px;
+            font-size: 25px;
+            font-weight: bolder;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .n-link{
+            background-color: black;
+            width: 250px;
+            height: 70px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            padding-top: 18px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+
+        .link{
+            color: white;
+            text-decoration: none !important;
+            font-size: 20px;
+            font-weight: bolder;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .link:hover{
+            color: chartreuse;
+        }
+
+        .grid1:hover{
+            transform: translateY(-35px);
+        }
+
+        .grid2{
+            background-color:cadetblue;
+            color: white;
+            width: 250px;
+            height: 200px;
+            margin-top: 100px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            margin-bottom: 100px;
+        }
+
+        .grid2:hover{
+            transform: translateY(-35px);
+        }
+
+        .grid3{
+            background-color:burlywood;
+            color: white;
+            width: 250px;
+            height: 200px;
+            margin-top: 100px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            margin-bottom: 100px;
+        }
+
+        .grid3:hover{
+            transform: translateY(-35px);
+        }
+
+        .grid4{
+            background-color:crimson;
+            color: white;
+            width: 250px;
+            height: 200px;
+            margin-top: 100px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            margin-bottom: 100px;
+        }
+
+        .grid4:hover{
+            transform: translateY(-35px);
+        }
+
+        .grid5{
+            background-color:darkmagenta;
+            color: white;
+            width: 250px;
+            height: 200px;
+            margin-top: 100px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            margin-bottom: 100px;
+        }
+
+        .grid5:hover{
+            transform: translateY(-35px);
+        }
+
+        .footer{
+            background-color: rgb(27, 19, 51);
+            color: white;
+            margin-top: 100px;
+        }
+
+        .logo{
+            width: 130px;
+            margin-top: 50px;
+            padding-bottom: 100px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+
+        .footer-heading{
+            color: grey;
+            margin-top: 50px;
+            font-weight: lighter;
+            margin-left: 20px;
+        }
+
+        .footer-link{
+            margin-left: 20px;
+            color: white;
+        }
+
+        .footer-link:hover{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-info">
+        <a class="navbar-brand" href="#"><img src="{% static 'images/gshop_admin/gshop_logo.png' %}" width="120px"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#"><span class="fa fa-dashboard"></span> Dashboard</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                <span class="fa fa-eye"></span> View
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#"><span class="fa fa-user"></span> Users</a>
+                <a class="dropdown-item" href="#"><span class="fa fa-star"></span> Active Users</a>
+                <a class="dropdown-item" href="#"><span class="fa fa-cubes"></span> Products</a>
+                <a class="dropdown-item" href="#"><span class="fa fa-gift"></span> Orders</a>
+                <a class="dropdown-item" href="#"><span class="fa fa-phone"></span> Info Details</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href=""><span class="fa fa-bell"></span> Notifications</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <button class="btn btn-dark my-2 my-sm-0" type="submit">Logout</button>
+          </form>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-lg-12">
+                <h2 class="heading"><span class="fa fa-user"></span> Admin Dashboard</h2>
+                <hr>
+            </div>
+
+            <div class="col-xs-3 col-lg-3">
+                <div class="grid1">
+                    <img src="{% static 'images/gshop_admin/users.png' %}" class="grid-icon">
+                    <h3 class="grid-title">Users</h3>
+                    <div class="n-link">
+                        <center><a href="" class="link">View Details  <span class="fa fa-arrow-right"></span></a></center>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-3 col-lg-3">
+                <div class="grid2">
+                    <img src="{% static 'images/gshop_admin/active.png' %}" class="grid-icon">
+                    <h3 class="grid-title">Active Users</h3>
+                    <div class="n-link">
+                        <center><a href="" class="link">View Details  <span class="fa fa-arrow-right"></span></a></center>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-3 col-lg-3">
+                <div class="grid3">
+                    <img src="{% static 'images/gshop_admin/products.png' %}" class="grid-icon">
+                    <h3 class="grid-title">Products</h3>
+                    <div class="n-link">
+                        <center><a href="" class="link">View Details  <span class="fa fa-arrow-right"></span></a></center>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-xs-3 col-lg-3">
+                <div class="grid4">
+                    <img src="{% static 'images/gshop_admin/orders.png' %}" class="grid-icon">
+                    <h3 class="grid-title">Orders</h3>
+                    <div class="n-link">
+                        <center><a href="" class="link">View Details  <span class="fa fa-arrow-right"></span></a></center>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-xs-3 col-lg-3">
+                <div class="grid5">
+                    <img src="{% static 'images/gshop_admin/contact.png' %}" class="grid-icon">
+                    <h3 class="grid-title">Contact Details</h3>
+                    <div class="n-link">
+                        <center><a href="" class="link">View Details  <span class="fa fa-arrow-right"></span></a></center>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="row">
+            <div class="col-xs-2 col-lg-2">
+                <img src="{% static 'images/gshop_admin/gshop_logo.png' %}" class="logo">
+            </div>
+
+            <div class="col-xs-2 col-lg-2">
+                <h6 class="footer-heading">ABOUT</h6>
+                <a href="" class="footer-link">Contact Us</a><br>
+                <a href="" class="footer-link">About Us</a><br>
+                <a href="" class="footer-link">Careers</a><br>
+                <a href="" class="footer-link">G-shop Stories</a><br>
+            </div>
+
+            <div class="col-xs-2 col-lg-2">
+                <h6 class="footer-heading">HELP</h6>
+                <a href="" class="footer-link">Payments</a><br>
+                <a href="" class="footer-link">FAQ</a><br>
+            </div>
+
+            <div class="col-xs-2 col-lg-2">
+                <h6 class="footer-heading">POLICY</h6>
+                <a href="" class="footer-link">Terms Of Use</a><br>
+                <a href="" class="footer-link">Security</a><br>
+                <a href="" class="footer-link">Privacy</a><br>
+                <a href="" class="footer-link">Sitemap</a><br>
+            </div>
+
+            <div class="col-xs-2 col-lg-2">
+                <h6 class="footer-heading">Social Media</h6>
+                <a href="" class="footer-link">Instagram</a><br>
+                <a href="" class="footer-link">Twitter</a><br>
+                <a href="" class="footer-link">Youtube</a><br>
+            </div>
+            
+            
+
+            <div class="col-xs-2 col-lg-2">
+                <h6 class="footer-heading">Registered Office Address</h6>
+                <label class="footer-link">G-Shop Private Limited</label><br>
+                <label class="footer-link">CM Building</label><br>
+                <label class="footer-link">CM Tech Village</label><br>
+                <label class="footer-link">Pulvetta Road, Allum Kunnu</label><br>
+                <label class="footer-link">Karuvarakundu, 676523</label><br>
+                <label class="footer-link">Malappuram, Kerala</label><br>
+            </div>
+
+            <div class="col-xs-12 col-lg-12">
+                <hr color="grey">
+                <center>
+                <a href="" class="footer-link"><span class="fa fa-suitcase" style="color: gold;"></span> Become A User</a>
+                <label class="footer-link"><span class="fa fa-copyright"></span> 2019-2022 Gshop.com</label>
+                <a href="" class="footer-link"> <img src="{% static 'images/gshop_admin/payment.svg' %}" width="200px"></a><br><br>
+                </center>
+            </div>
+
+        </div>
+    </div>
+    
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</body>
+</html>
+
