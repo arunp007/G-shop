@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup For Admin</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <style>
+        .container-fluid{
+            background: linear-gradient(#42275a, #734b6d);
+            height: 800px;
+        }
+
+        .logo{
+            color: rgb(250, 250,250,0.5);
+            margin-top: 50px;
+            margin-bottom: 50px;
+            font-size: 50px;
+            font-weight: bolder;
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+        }
+
+        form{
+            background-color: white;
+            color: darkblue;
+            padding-top: 60px;
+            padding-bottom: 50px;
+            padding-left: 50px;
+            padding-right: 50px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px grey;
+            margin-left: auto;
+            margin-left: auto;
+            display: block;
+        }
+
+        .form-heading{
+            margin-bottom: 50px;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .form-control{
+            margin-bottom: 30px;
+        }
+
+        .btn-primary{
+            width: 150px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-3 col-lg-3"></div>
+            <div class="col-xs-5 col-lg-5">
+                <h1 class="logo">G - shop</h1>
+                <form method="post">
+                    <h4 class="form-heading">Admin Registration</h4>
+                    {% csrf_token %}
+                    <input type="email" name="email" class="form-control" placeholder="Email Id">
+                    <input type="password" name="password" class="form-control" placeholder="Password">
+                    <button type="submit" class="btn btn-primary" onclick="return register()">Sign Up</button>
+                </form>
+            </div>
+            <div class="col-xs-3 col-lg-3"></div>
+        </div>
+    </div>
+
+    <script>
+        function register(){
+            alert('Registered Successfully....')
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</body>
+</html>
