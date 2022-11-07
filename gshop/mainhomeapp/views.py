@@ -36,3 +36,9 @@ def user_signup(request):
         user_data = User(name = name, email = email, phone = phone, address = address, password = password)
         user_data.save()
     return render(request, 'signup_user.html')
+
+def admin_login(request):
+    return render(request, 'login_admin.html')
+
+def user_login(request):
+    return render(request, 'login_user.html')

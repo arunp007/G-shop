@@ -92,7 +92,7 @@
             var address = document.getElementById('address')
             var pass = document.getElementById('password')
 
-            if(name.value == ''){
+            if(name.value == ""){
                 document.getElementById('name').style.borderColor="red"
                 document.getElementById('name_error').innerHTML="** Please Enter Your Name **"
                 document.getElementById('name_error').style.color="red"
@@ -106,7 +106,7 @@
                 var status = 1
             }
 
-            if(email.value == ''){
+            if(email.value == ""){
                 document.getElementById('email').style.borderColor="red"
                 document.getElementById('email_error').innerHTML="** Please Enter Your Email Id **"
                 document.getElementById('email_error').style.color="red"
@@ -120,9 +120,9 @@
                 var status = 1
             }
 
-            if(phone.value == ''){
+            if(phone.value == ""){
                 document.getElementById('phone').style.borderColor="red"
-                document.getElementById('phone_error').innerHTML="** Enter Your Phone Number **"
+                document.getElementById('phone_error').innerHTML="** Please Enter Your Phone Number **"
                 document.getElementById('phone_error').style.color="red"
                 document.getElementById('phone_error').style.display="block"
                 var status = 0
@@ -134,9 +134,9 @@
                 var status = 1
             }
 
-            if(address.value == ''){
+            if(address.value == ""){
                 document.getElementById('address').style.borderColor="red"
-                document.getElementById('address_error').innerHTML="** Enter Your Permanent Address **"
+                document.getElementById('address_error').innerHTML="** Please Enter Your Permanent Address **"
                 document.getElementById('address_error').style.color="red"
                 document.getElementById('address_error').style.display="block"
                 var status = 0
@@ -148,9 +148,9 @@
                 var status = 1
             }
 
-            if(pass.value == ''){
+            if(pass.value == ""){
                 document.getElementById('password').style.borderColor="red"
-                document.getElementById('password_error').innerHTML="** Enter Your Password **"
+                document.getElementById('password_error').innerHTML="** Please Enter Your Password **"
                 document.getElementById('password_error').style.color="red"
                 document.getElementById('password_error').style.display="block"
                 var status = 0
