@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,54 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup For Admin</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <style>
-        .container-fluid{
-            background: linear-gradient(#42275a, #734b6d);
-            height: 800px;
-        }
-
-        .logo{
-            color: rgb(250, 250,250,0.5);
-            margin-top: 50px;
-            margin-bottom: 50px;
-            font-size: 50px;
-            font-weight: bolder;
-            font-family: 'Times New Roman', Times, serif;
-            text-align: center;
-        }
-
-        form{
-            background-color: white;
-            color: darkblue;
-            padding-top: 60px;
-            padding-bottom: 50px;
-            padding-left: 50px;
-            padding-right: 50px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px grey;
-            margin-left: auto;
-            margin-left: auto;
-            display: block;
-        }
-
-        .form-heading{
-            margin-bottom: 50px;
-            font-size: 30px;
-            text-align: center;
-        }
-
-        .form-control{
-            margin-bottom: 30px;
-        }
-
-        .btn-primary{
-            width: 150px;
-            margin-left: auto;
-            margin-right: auto;
-            display: block;
-            margin-top: 50px;
-        }
-    </style>
+    <link rel="stylesheet" href="{% static 'css/gshop/signup_admin.css' %}">
 </head>
 <body>
     <div class="container-fluid">

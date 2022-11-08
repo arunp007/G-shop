@@ -1,0 +1,63 @@
+.carousel-item{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.carousel-item:hover{
+    zoom: 70%;
+}
+
+form{
+    background-color: lightgray;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 750px;
+}
+
+.heading{
+    text-align: center;
+    font-family: fantasy;
+    font-size: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.description{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+.form-control{
+    margin-bottom: 10px;
+}
+
+.btn-dark{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 200px;
+    border-radius: 50px;
+    margin-top: 50px;
+    margin-bottom: 150px;
+}
+
+label{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.link{
+    color: green;
+    text-decoration: none !important;
+}
+
+.link:hover{
+    color: green;
+}

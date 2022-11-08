@@ -8,208 +8,7 @@
     <title>Admin</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        .nav-link{
-            font-size: 23px;
-            font-weight: bolder;
-            font-family: 'Times New Roman', Times, serif;
-        }
-
-        .dropdown-menu{
-            background-color: black;
-            width: 300px;
-            height: 300px;
-            border-radius: 10px;
-        }
-
-        .dropdown-item{
-            color: white;
-            font-size: 20px;
-        }
-
-        .dropdown-item:hover{
-            background-color: chartreuse;
-        }
-
-        .btn-dark{
-            border-radius: 100px;
-            width: 120px;
-        }
-
-        .btn-dark:hover{
-            background-color: red;
-            border: red;
-        }
-
-        .heading{
-            margin-top: 160px;
-            font-weight: bolder;
-            font-family: 'Times New Roman', Times, serif;
-            color: brown;
-        }
-
-        .grid1{
-            background-color: tomato;
-            color: white;
-            width: 250px;
-            height: 200px;
-            margin-top: 100px;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-            margin-left: auto;
-            margin-right: auto;
-            display: block;
-            margin-bottom: 100px;
-        }
-
-        .grid-icon{
-            width: 100px;
-            height: 100px;
-            margin-left: auto;
-            margin-right: auto;
-            display: block;
-            padding-top: 5px;
-        }
-
-        .grid-title{
-            text-align: center;
-            margin-top: 20px;
-            font-size: 25px;
-            font-weight: bolder;
-            font-family: Georgia, 'Times New Roman', Times, serif;
-        }
-
-        .n-link{
-            background-color: black;
-            width: 250px;
-            height: 70px;
-            border-bottom-left-radius: 20px;
-            border-bottom-right-radius: 20px;
-            padding-top: 18px;
-            margin-left: auto;
-            margin-right: auto;
-            display: block;
-        }
-
-        .link{
-            color: white;
-            text-decoration: none !important;
-            font-size: 20px;
-            font-weight: bolder;
-            font-family: Georgia, 'Times New Roman', Times, serif;
-        }
-
-        .link:hover{
-            color: chartreuse;
-        }
-
-        .grid1:hover{
-            transform: translateY(-35px);
-        }
-
-        .grid2{
-            background-color:cadetblue;
-            color: white;
-            width: 250px;
-            height: 200px;
-            margin-top: 100px;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-            margin-left: auto;
-            margin-right: auto;
-            display: block;
-            margin-bottom: 100px;
-        }
-
-        .grid2:hover{
-            transform: translateY(-35px);
-        }
-
-        .grid3{
-            background-color:burlywood;
-            color: white;
-            width: 250px;
-            height: 200px;
-            margin-top: 100px;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-            margin-left: auto;
-            margin-right: auto;
-            display: block;
-            margin-bottom: 100px;
-        }
-
-        .grid3:hover{
-            transform: translateY(-35px);
-        }
-
-        .grid4{
-            background-color:crimson;
-            color: white;
-            width: 250px;
-            height: 200px;
-            margin-top: 100px;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-            margin-left: auto;
-            margin-right: auto;
-            display: block;
-            margin-bottom: 100px;
-        }
-
-        .grid4:hover{
-            transform: translateY(-35px);
-        }
-
-        .grid5{
-            background-color:darkmagenta;
-            color: white;
-            width: 250px;
-            height: 200px;
-            margin-top: 100px;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-            margin-left: auto;
-            margin-right: auto;
-            display: block;
-            margin-bottom: 100px;
-        }
-
-        .grid5:hover{
-            transform: translateY(-35px);
-        }
-
-        .footer{
-            background-color: rgb(27, 19, 51);
-            color: white;
-            margin-top: 100px;
-        }
-
-        .logo{
-            width: 130px;
-            margin-top: 50px;
-            padding-bottom: 100px;
-            margin-left: auto;
-            margin-right: auto;
-            display: block;
-        }
-
-        .footer-heading{
-            color: grey;
-            margin-top: 50px;
-            font-weight: lighter;
-            margin-left: 20px;
-        }
-
-        .footer-link{
-            margin-left: 20px;
-            color: white;
-        }
-
-        .footer-link:hover{
-            color: white;
-        }
-    </style>
+    <link rel="stylesheet" href="{% static 'css/gshop/admin_home.css' %}">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-info">
@@ -300,6 +99,16 @@
                     <h3 class="grid-title">Contact Details</h3>
                     <div class="n-link">
                         <center><a href="{% url 'contact_table' %}" class="link">View Details  <span class="fa fa-arrow-right"></span></a></center>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-3 col-lg-3">
+                <div class="grid6">
+                    <img src="{% static 'images/gshop_admin/message.png' %}" class="grid-icon">
+                    <h3 class="grid-title">Sent Message</h3>
+                    <div class="n-link">
+                        <center><a href="" class="link">View Details  <span class="fa fa-arrow-right"></span></a></center>
                     </div>
                 </div>
             </div>

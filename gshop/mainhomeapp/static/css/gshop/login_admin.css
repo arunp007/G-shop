@@ -1,0 +1,65 @@
+.container-fluid{
+    background-color: #2c3e50;
+    height: 800px;
+}
+
+.form{
+    padding-left: 50px !important;
+    margin-right: 50px !important;
+}
+
+.icon{
+    background-color: lightgray;
+    width: 130px;
+    height: 130px;
+    border-radius: 150px;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.icon-image{
+    width: 110px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding-top: 15px;
+    padding-left: 5px !important;
+}
+
+.heading{
+    color: lightgray;
+    margin-top: 15px;
+    margin-bottom: 35px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 45px;
+}
+
+.form-control{
+    margin-bottom: 10px;
+}
+
+.btn-info{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.fa-user{
+    padding-top: 30px;
+}
+
+.link{
+    text-decoration: none !important;
+    color:grey;
+    font-size: 22px;
+}
+
+.link:hover{
+    color: grey;
+}

@@ -7,71 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login To G-shop</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <style>
-        .carousel-item{
-            padding-top: 10px;
-            padding-bottom: 10px;
-            padding-left: 10px;
-            padding-right: 10px;
-        }
-
-        .carousel-item:hover{
-            zoom: 70%;
-        }
-
-        form{
-            background-color: lightgray;
-            padding-top: 20px;
-            padding-bottom: 20px;
-            padding-left: 20px;
-            padding-right: 20px;
-            height: 750px;
-        }
-
-        .heading{
-            text-align: center;
-            font-family: fantasy;
-            font-size: 50px;
-            margin-top: 30px;
-            margin-bottom: 30px;
-        }
-
-        .description{
-            text-align: center;
-            margin-top: 20px;
-            margin-bottom: 50px;
-            font-size: 20px;
-            font-weight: lighter;
-        }
-
-        .form-control{
-            margin-bottom: 10px;
-        }
-
-        .btn-dark{
-            margin-left: auto;
-            margin-right: auto;
-            display: block;
-            width: 200px;
-            border-radius: 50px;
-            margin-top: 50px;
-            margin-bottom: 150px;
-        }
-
-        label{
-            margin-right: 10px;
-            margin-left: 10px;
-        }
-
-        .link{
-            color: green;
-            text-decoration: none !important;
-        }
-
-        .link:hover{
-            color: green;
-        }
-    </style>
+    <link rel="stylesheet" href="{% static 'css/gshop/login_user.css' %}">
+    <script src="{% static 'javascript/gshop/login_user.js' %}"></script>
 </head>
 <body>
     <div class="container-fluid">
@@ -117,50 +54,6 @@
             </div>
         </div>
     </div>
-
-    <script>
-        function validation(){
-            var status = 1
-            var email = document.getElementById('email')
-            var pass = document.getElementById('password')
-
-            if(email.value == ""){
-                document.getElementById('email').style.borderColor="red"
-                document.getElementById('email_error').innerHTML="** Please Enter Your Email Id **"
-                document.getElementById('email_error').style.color="red"
-                document.getElementById('email_error').style.display="block"
-                var status = 0
-            }
-
-            else{
-                document.getElementById('email').style.borderColor="black"
-                document.getElementById('email_error').style.display="none"
-                var status = 1
-            }
-
-            if(pass.value == ""){
-                document.getElementById('password').style.borderColor="red"
-                document.getElementById('password_error').innerHTML="** Please Enter Your Password **"
-                document.getElementById('password_error').style.color="red"
-                document.getElementById('password_error').style.display="block"
-                var status = 0
-            }
-
-            else{
-                document.getElementById('password').style.borderColor="black"
-                document.getElementById('password_error').style.display="none"
-                var status = 1
-            }
-
-            if(status == 0){
-                return false;
-            }
-
-            if(status == 1){
-                return true;
-            }
-        }
-    </script>
     
 
 
