@@ -66,15 +66,15 @@
                 <form action="" method="post">
                     {% csrf_token %}
                     <h6 class="form-heading">Create A New Account</h6>
-                    <input type="text" class="form-control" name="name" id="name" placeholder="Name" onkeyup="return valid_name()">
+                    <input type="text" class="form-control" name="name" id="name" value="{{update.name}}" placeholder="Name" onkeyup="return valid_name()">
                     <label id="name_error"></label>
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Email Id" onkeyup="return valid_email()">
+                    <input type="email" class="form-control" name="email" id="email" value="{{update.email}}" placeholder="Email Id" onkeyup="return valid_email()">
                     <label id="email_error"></label>
-                    <input type="text" class="form-control" name="phone" id="phone" placeholder="Phone Number" onkeyup="return valid_phone()">
+                    <input type="text" class="form-control" name="phone" id="phone" value="{{update.phone}}" placeholder="Phone Number" onkeyup="return valid_phone()">
                     <label id="phone_error"></label>
-                    <textarea class="form-control" name="address" id="address" placeholder="Address" onkeyup="return valid_address()"></textarea>
+                    <textarea class="form-control" name="address" id="address" value="{{update.address}}" placeholder="Address" onkeyup="return valid_address()"></textarea>
                     <label id="address_error"></label>
-                    <input type="password" class="form-control" name="password" id="password" placeholder="Password" onkeyup="return valid_password()">
+                    <input type="password" class="form-control" name="password" value="{{update.password}}" id="password" placeholder="Password" onkeyup="return valid_password()">
                     <label id="password_error"></label>
                     <button type="submit" id="btn" class="btn btn-success" onclick="return validation()">Sign Up</button>
                 </form>

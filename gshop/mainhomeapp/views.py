@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render , redirect
 from django.http import HttpResponse
 from.models import *
 
@@ -18,6 +18,10 @@ def contact(request):
         contact_data.save()
     return render(request, 'contact.html')
 
+def contact_table(request):
+    contact_data = Contact.objects.all()
+    return render(request, 'contact_table.html', {'contact' : contact_data})
+
 def admin_signup(request):
     if request.method == 'POST':
         email = request.POST['email']
@@ -36,6 +40,30 @@ def user_signup(request):
         user_data = User(name = name, email = email, phone = phone, address = address, password = password)
         user_data.save()
     return render(request, 'signup_user.html')
+
+def delete(request,id):
+    User.objects.get(id=id).delete()
+    return redirect('user_table')
+
+def update(request,id):
+    update_data = ''
+    if request.method == 'POST':
+        name = request.POST['name']
+        email = request.POST['email']
+        phone = request.POST['phone']
+        address = request.POST['address']
+        password = request.POST['password']
+        User.objects.filter(id = id).update(name = name, email = email, phone = phone, address = address, password = password)
+        return redirect('user_table')
+
+    else:
+    
+        update_data = User.objects.get(id = id)
+    return render(request, 'signup_user.html', {'update': update_data})
+
+def user_table(request):
+    user_data = User.objects.all()
+    return render(request, 'user_table.html', {'user': user_data})
 
 def admin_login(request):
     return render(request, 'login_admin.html')

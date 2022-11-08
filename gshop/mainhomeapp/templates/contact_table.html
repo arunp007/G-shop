@@ -42,141 +42,28 @@
         }
 
         .heading{
-            margin-top: 160px;
+            margin-top: 200px;
+            margin-bottom: 30px;
+            font-size: 32px;
             font-weight: bolder;
-            font-family: 'Times New Roman', Times, serif;
-            color: brown;
-        }
-
-        .grid1{
-            background-color: tomato;
-            color: white;
-            width: 250px;
-            height: 200px;
-            margin-top: 100px;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-            margin-left: auto;
-            margin-right: auto;
-            display: block;
-            margin-bottom: 100px;
-        }
-
-        .grid-icon{
-            width: 100px;
-            height: 100px;
-            margin-left: auto;
-            margin-right: auto;
-            display: block;
-            padding-top: 5px;
-        }
-
-        .grid-title{
             text-align: center;
-            margin-top: 20px;
-            font-size: 25px;
-            font-weight: bolder;
-            font-family: Georgia, 'Times New Roman', Times, serif;
         }
 
-        .n-link{
+        .grid{
             background-color: black;
-            width: 250px;
-            height: 70px;
-            border-bottom-left-radius: 20px;
-            border-bottom-right-radius: 20px;
-            padding-top: 18px;
-            margin-left: auto;
-            margin-right: auto;
-            display: block;
-        }
-
-        .link{
             color: white;
-            text-decoration: none !important;
-            font-size: 20px;
-            font-weight: bolder;
-            font-family: Georgia, 'Times New Roman', Times, serif;
-        }
-
-        .link:hover{
-            color: chartreuse;
-        }
-
-        .grid1:hover{
-            transform: translateY(-35px);
-        }
-
-        .grid2{
-            background-color:cadetblue;
-            color: white;
-            width: 250px;
+            width: 240px;
             height: 200px;
+            border-radius: 10px;
             margin-top: 100px;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
+            margin-bottom: 100px;
             margin-left: auto;
             margin-right: auto;
             display: block;
-            margin-bottom: 100px;
-        }
-
-        .grid2:hover{
-            transform: translateY(-35px);
-        }
-
-        .grid3{
-            background-color:burlywood;
-            color: white;
-            width: 250px;
-            height: 200px;
-            margin-top: 100px;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-            margin-left: auto;
-            margin-right: auto;
-            display: block;
-            margin-bottom: 100px;
-        }
-
-        .grid3:hover{
-            transform: translateY(-35px);
-        }
-
-        .grid4{
-            background-color:crimson;
-            color: white;
-            width: 250px;
-            height: 200px;
-            margin-top: 100px;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-            margin-left: auto;
-            margin-right: auto;
-            display: block;
-            margin-bottom: 100px;
-        }
-
-        .grid4:hover{
-            transform: translateY(-35px);
-        }
-
-        .grid5{
-            background-color:darkmagenta;
-            color: white;
-            width: 250px;
-            height: 200px;
-            margin-top: 100px;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-            margin-left: auto;
-            margin-right: auto;
-            display: block;
-            margin-bottom: 100px;
-        }
-
-        .grid5:hover{
-            transform: translateY(-35px);
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 20px;
+            padding-bottom: 20px;
         }
 
         .footer{
@@ -220,15 +107,15 @@
       
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
+            <li class="nav-item">
               <a class="nav-link" href="{% url 'admin_home' %}"><span class="fa fa-dashboard"></span> Dashboard</a>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown active">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
                 <span class="fa fa-eye"></span> View
               </a>
               <div class="dropdown-menu">
-                <a class="dropdown-item" href="{% url 'user_table' %}"><span class="fa fa-user"></span> Users</a>
+                <a class="dropdown-item" href="#"><span class="fa fa-user"></span> Users</a>
                 <a class="dropdown-item" href="#"><span class="fa fa-star"></span> Active Users</a>
                 <a class="dropdown-item" href="#"><span class="fa fa-cubes"></span> Products</a>
                 <a class="dropdown-item" href="#"><span class="fa fa-gift"></span> Orders</a>
@@ -248,60 +135,18 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-xs-12 col-lg-12">
-                <h2 class="heading"><span class="fa fa-user"></span> Admin Dashboard</h2>
+                <h4 class="heading">Contact Details</h4>
                 <hr>
             </div>
-
             <div class="col-xs-3 col-lg-3">
-                <div class="grid1">
-                    <img src="{% static 'images/gshop_admin/users.png' %}" class="grid-icon">
-                    <h3 class="grid-title">Users</h3>
-                    <div class="n-link">
-                        <center><a href="{% url 'user_table' %}" class="link">View Details  <span class="fa fa-arrow-right"></span></a></center>
-                    </div>
+                {% for i in contact %}
+                <div class="grid">
+                    <h6>Name : {{i.name}}</h6>
+                    <h6>Email : {{i.email}}</h6>
+                    <h6>Phone : {{i.phone}}</h6>
+                    <h6>Message : {{i.message}}</h6>
                 </div>
-            </div>
-
-            <div class="col-xs-3 col-lg-3">
-                <div class="grid2">
-                    <img src="{% static 'images/gshop_admin/active.png' %}" class="grid-icon">
-                    <h3 class="grid-title">Active Users</h3>
-                    <div class="n-link">
-                        <center><a href="" class="link">View Details  <span class="fa fa-arrow-right"></span></a></center>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xs-3 col-lg-3">
-                <div class="grid3">
-                    <img src="{% static 'images/gshop_admin/products.png' %}" class="grid-icon">
-                    <h3 class="grid-title">Products</h3>
-                    <div class="n-link">
-                        <center><a href="" class="link">View Details  <span class="fa fa-arrow-right"></span></a></center>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="col-xs-3 col-lg-3">
-                <div class="grid4">
-                    <img src="{% static 'images/gshop_admin/orders.png' %}" class="grid-icon">
-                    <h3 class="grid-title">Orders</h3>
-                    <div class="n-link">
-                        <center><a href="" class="link">View Details  <span class="fa fa-arrow-right"></span></a></center>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="col-xs-3 col-lg-3">
-                <div class="grid5">
-                    <img src="{% static 'images/gshop_admin/contact.png' %}" class="grid-icon">
-                    <h3 class="grid-title">Contact Details</h3>
-                    <div class="n-link">
-                        <center><a href="{% url 'contact_table' %}" class="link">View Details  <span class="fa fa-arrow-right"></span></a></center>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </div>
