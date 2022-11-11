@@ -61,3 +61,9 @@ label{
 .link:hover{
     color: green;
 }
+
+.home-link{
+    text-decoration: none !important;
+    color: black !important;
+    font-size: 15px;
+}

@@ -66,7 +66,37 @@ def user_table(request):
     return render(request, 'user_table.html', {'user': user_data})
 
 def admin_login(request):
+    if request.method == 'POST':
+        email = request.POST['email']
+        password = request.POST['password']
+        
+        try:
+            current_user = Admin.objects.get(email = email, password = password)
+            request.session['xyz'] = current_user.id
+            return redirect('admin_home')
+
+        except Admin.DoesNotExist:
+            return render(request, 'login_admin.html', {'message': "Username And Password Is Wrong"})
+    return render(request, 'login_admin.html')
+
+def admin_logout(request):
+    request.session.flush()
     return render(request, 'login_admin.html')
 
 def user_login(request):
+    if request.method == 'POST':
+        email = request.POST['email']
+        password = request.POST['password']
+
+        try:
+            current_user = User.objects.get(email = email, password = password)
+            request.session['xyz'] = current_user.id
+            return redirect('user_home')
+
+        except User.DoesNotExist:
+            return render(request, 'login_user.html', {'message': "Username And Password Is Wrong"})
+    return render(request, 'login_user.html')
+
+def user_logout(request):
+    request.session.flush()
     return render(request, 'login_user.html')

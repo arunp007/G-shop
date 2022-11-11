@@ -63,3 +63,9 @@
 .link:hover{
     color: grey;
 }
+
+.home-link{
+    text-decoration: none !important;
+    color: white !important;
+    font-size: 15px !important;
+}

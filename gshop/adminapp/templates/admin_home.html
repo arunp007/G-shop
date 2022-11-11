@@ -8,7 +8,7 @@
     <title>Admin</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="{% static 'css/gshop/admin_home.css' %}">
+    <link rel="stylesheet" href="{% static 'css/gshop/admin_home__.css' %}">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-info">
@@ -39,7 +39,7 @@
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
-            <button class="btn btn-dark my-2 my-sm-0" type="submit">Logout</button>
+            <a class="btn btn-dark my-2 my-sm-0" type="submit" href="{% url 'admin_logout' %}">Logout</a>
           </form>
         </div>
     </nav>
@@ -74,7 +74,17 @@
             <div class="col-xs-3 col-lg-3">
                 <div class="grid3">
                     <img src="{% static 'images/gshop_admin/products.png' %}" class="grid-icon">
-                    <h3 class="grid-title">Products</h3>
+                    <h3 class="grid-title">Grocery</h3>
+                    <div class="n-link">
+                        <center><a href="" class="link">View Details  <span class="fa fa-arrow-right"></span></a></center>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-3 col-lg-3">
+                <div class="grid7">
+                    <img src="{% static 'images/gshop_admin/medicine.png' %}" class="grid-icon">
+                    <h3 class="grid-title">Medicine</h3>
                     <div class="n-link">
                         <center><a href="" class="link">View Details  <span class="fa fa-arrow-right"></span></a></center>
                     </div>
