@@ -1,0 +1,220 @@
+.nav-link{
+    font-size: 23px;
+    font-weight: bolder;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.dropdown-menu{
+    background-color: black;
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.dropdown-item{
+    color: white;
+    font-size: 20px;
+}
+
+.dropdown-item:hover{
+    background-color: dodgerblue;
+}
+
+.btn-dark{
+    border-radius: 100px;
+    width: 120px;
+}
+
+.btn-dark:hover{
+    background-color: red;
+    border: red;
+}
+
+.carousel-inner{
+    margin-top: 180px;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.carousel-control-prev{
+    background-color: rgb(232, 223, 223,0.5);
+    width: 80px;
+    height: 80px;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: block;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.carousel-control-next{
+    background-color: rgb(232,223,223,0.5);
+    width: 80px;
+    height: 80px;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: block;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.container-1{
+    margin-top: 100px;
+    margin-bottom: 50px;
+    background: linear-gradient(#42275a, #734b6d);
+}
+
+.product-heading{
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.product{
+    background-color: white;
+    width: 280px;
+    height: 490px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.product-offer{
+    width: 100px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.product-image{
+    width: 200px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding-top: 30px;
+    margin-bottom: 50px;
+}
+
+.product-image:hover{
+    zoom: 98%;
+}
+
+.product-title{
+    font-size: 25px;
+    font-weight: lighter;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.product-weight{
+    color: grey;
+    font-weight: bolder;
+    margin-left: 20px;
+}
+
+.product-price1{
+    margin-left: 20px;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+.product-price2{
+    margin-left: 20px;
+    font-weight: bolder;
+    font-size: 20px;
+    color: green;
+}
+
+.btn-success{
+    margin-top: 20px;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.category-heading{
+    font-size: 40px;
+    font-weight: bolder;
+    text-align: center;
+    color:tomato;
+    margin-bottom: 50px;
+}
+
+.category-link{
+    text-decoration: none !important;
+    color: black !important;
+}
+
+.category-image{
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.category-image:hover{
+    zoom: 98%;
+}
+
+.category-name{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 100px;
+}
+
+.card{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
+}
+
+.card:hover{
+    zoom: 98%;
+}
+
+.footer{
+    background-color: rgb(19, 19, 20);
+    color: white;
+    margin-top: 100px;
+}
+
+.logo{
+    width: 130px;
+    margin-top: 50px;
+    padding-bottom: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.footer-heading{
+    color: grey;
+    margin-top: 50px;
+    font-weight: lighter;
+    margin-left: 20px;
+}
+
+.footer-link{
+    margin-left: 20px;
+    color: white;
+}
+
+.footer-link:hover{
+    color: white;
+}

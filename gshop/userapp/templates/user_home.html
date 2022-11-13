@@ -8,7 +8,7 @@
     <title>G-Shop Home</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="{% static 'css/gshop/user_home_.css' %}">
+    <link rel="stylesheet" href="{% static 'css/gshop/user_home__.css' %}">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-success">
@@ -91,7 +91,7 @@
                     <h4 class="product-title">Broccoli</h4>
                     <p class="product-weight">Net Wt: 200gm</p>
                     <label class="product-price1"><span class="fa fa-rupee"></span> <strike>150</strike></label><br> <label class="product-price2"><span class="fa fa-rupee"></span> 119</label>
-                    <a href="" class="btn btn-success" type="button">Buy Now</a>
+                    <a href="{% url 'grocery' %}" class="btn btn-success" type="button">Buy Now</a>
                 </div>
             </div>
 
@@ -102,7 +102,7 @@
                     <h4 class="product-title">Capsicum</h4>
                     <p class="product-weight">Net Wt: 1kg</p>
                     <label class="product-price1"><span class="fa fa-rupee"></span> <strike>120</strike></label><br> <label class="product-price2"><span class="fa fa-rupee"></span> 100</label>
-                    <a href="" class="btn btn-success" type="button">Buy Now</a>
+                    <a href="{% url 'grocery' %}" class="btn btn-success" type="button">Buy Now</a>
                 </div>
             </div>
 
@@ -113,7 +113,7 @@
                     <h4 class="product-title">Banana Nendran</h4>
                     <p class="product-weight">Net Wt: 1kg</p>
                     <label class="product-price1"><span class="fa fa-rupee"></span> <strike>100</strike></label><br> <label class="product-price2"><span class="fa fa-rupee"></span> 80</label>
-                    <a href="" class="btn btn-success" type="button">Buy Now</a>
+                    <a href="{% url 'grocery' %}" class="btn btn-success" type="button">Buy Now</a>
                 </div>
             </div>
 
@@ -124,7 +124,7 @@
                     <h4 class="product-title">White Rice</h4>
                     <p class="product-weight">Net Wt: 1kg</p>
                     <label class="product-price1"><span class="fa fa-rupee"></span> <strike>100</strike></label><br> <label class="product-price2"><span class="fa fa-rupee"></span> 80</label>
-                    <a href="" class="btn btn-success" type="button">Buy Now</a>
+                    <a href="{% url 'grocery' %}" class="btn btn-success" type="button">Buy Now</a>
                 </div>
             </div>
 
@@ -138,70 +138,70 @@
             </div>
 
             <div class="col-xs-2 col-lg-2">
-                <a href="#" class="category-link">
+                <a href="{% url 'grocery' %}" class="category-link">
                     <img src="{% static 'images/gshop_main/vegetables.jpg' %}" class="category-image">
                     <h6 class="category-name">Vegetables</h6>
                 </a>
             </div>
 
             <div class="col-xs-2 col-lg-2">
-                <a href="#" class="category-link">
+                <a href="{% url 'grocery' %}" class="category-link">
                     <img src="{% static 'images/gshop_main/fruits.jpg' %}" class="category-image">
                     <h6 class="category-name">Fruits</h6>
                 </a>
             </div>
 
             <div class="col-xs-2 col-lg-2">
-                <a href="#" class="category-link">
+                <a href="{% url 'grocery' %}" class="category-link">
                     <img src="{% static 'images/gshop_main/dry-fruits.jpg' %}" class="category-image">
                     <h6 class="category-name">Dry Fruits</h6>
                 </a>
             </div>
 
             <div class="col-xs-2 col-lg-2">
-                <a href="#" class="category-link">
+                <a href="{% url 'grocery' %}" class="category-link">
                     <img src="{% static 'images/gshop_main/spices.jpg' %}" class="category-image">
                     <h6 class="category-name">Curry Powders</h6>
                 </a>
             </div>
 
             <div class="col-xs-2 col-lg-2">
-                <a href="#" class="category-link">
+                <a href="{% url 'grocery' %}" class="category-link">
                     <img src="{% static 'images/gshop_main/food-grains.jpg' %}" class="category-image">
                     <h6 class="category-name">Food Grains</h6>
                 </a>
             </div>
 
             <div class="col-xs-2 col-lg-2">
-                <a href="#" class="category-link">
+                <a href="{% url 'grocery' %}" class="category-link">
                     <img src="{% static 'images/gshop_main/cooking-oils.png' %}" class="category-image">
                     <h6 class="category-name">Cooking Oils</h6>
                 </a>
             </div>
 
             <div class="col-xs-2 col-lg-2">
-                <a href="#" class="category-link">
+                <a href="{% url 'grocery' %}" class="category-link">
                     <img src="{% static 'images/gshop_main/oral-care.jpg' %}" class="category-image">
                     <h6 class="category-name">Oral Care</h6>
                 </a>
             </div>
 
             <div class="col-xs-2 col-lg-2">
-                <a href="#" class="category-link">
+                <a href="{% url 'grocery' %}" class="category-link">
                     <img src="{% static 'images/gshop_main/cleaning-essentials.png' %}" class="category-image">
                     <h6 class="category-name">Cleaning Essentials</h6>
                 </a>
             </div>
 
             <div class="col-xs-2 col-lg-2">
-                <a href="#" class="category-link">
+                <a href="{% url 'grocery' %}" class="category-link">
                     <img src="{% static 'images/gshop_main/detergent.webp' %}" class="category-image">
                     <h6 class="category-name">Detergents</h6>
                 </a>
             </div>
 
             <div class="col-xs-2 col-lg-2">
-                <a href="#" class="category-link">
+                <a href="{% url 'medicine' %}" class="category-link">
                     <img src="{% static 'images/gshop_main/medicines.png' %}" class="category-image">
                     <h6 class="category-name">Medicines</h6>
                 </a>
