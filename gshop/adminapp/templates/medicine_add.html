@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grocery</title>
+    <title>Medicine</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/gshop/medicine_add.css' %}">
     <script src="{% static 'javascript/gshop/medicine_add.js' %}"></script>
@@ -20,11 +20,11 @@
                     <h1>Add Medicine</h1>
                     <input type="file" class="form-control" name="image" id="image">
                     <label id="image_error"></label>
-                    <input type="text" class="form-control" name="mname" id="name" placeholder="Medicine Name">
+                    <input type="text" class="form-control" name="mname" id="name" placeholder="Medicine Name" value="{{update.name}}">
                     <label id="name_error"></label>
-                    <input type="text" class="form-control" name="mdescription" id="description" placeholder="Medicine Description">
+                    <input type="text" class="form-control" name="mdescription" id="description" placeholder="Medicine Description" value="{{update.description}}">
                     <label id="description_error"></label>
-                    <input type="text" class="form-control" name="mprice" id="price" placeholder="Medicine Price">
+                    <input type="text" class="form-control" name="mprice" id="price" placeholder="Medicine Price" value="{{update.price}}">
                     <label id="price_error"></label>
                     <button type="submit" class="btn btn-danger" onclick="return validation()">Submit</button>
                 </form>

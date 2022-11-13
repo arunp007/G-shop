@@ -176,6 +176,18 @@
     margin-bottom: 100px;
 }
 
+.card{
+    margin-top: 150px;
+    margin-bottom: 100px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
+}
+
+.card:hover{
+    zoom: 98%;
+}
+
 .footer{
     background-color: rgb(19, 19, 20);
     color: white;

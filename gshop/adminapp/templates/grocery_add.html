@@ -20,11 +20,11 @@
                     <h1>Add Products</h1>
                     <input type="file" class="form-control" name="image" id="image">
                     <label id="image_error"></label>
-                    <input type="text" class="form-control" name="gname" id="name" placeholder="Grocery Name">
+                    <input type="text" class="form-control" name="gname" id="name" placeholder="Grocery Name" value="{{update.name}}">
                     <label id="name_error"></label>
-                    <input type="text" class="form-control" name="description" id="description" placeholder="Grocery Description">
+                    <input type="text" class="form-control" name="description" id="description" placeholder="Grocery Description" value="{{update.description}}">
                     <label id="description_error"></label>
-                    <input type="text" class="form-control" name="price" id="price" placeholder="Grocery Price">
+                    <input type="text" class="form-control" name="price" id="price" placeholder="Grocery Price" value="{{update.price}}">
                     <label id="price_error"></label>
                     <button type="submit" class="btn btn-success" onclick="return validation()">Submit</button>
                 </form>

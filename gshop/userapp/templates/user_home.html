@@ -8,7 +8,7 @@
     <title>G-Shop Home</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="{% static 'css/gshop/user_home.css' %}">
+    <link rel="stylesheet" href="{% static 'css/gshop/user_home_.css' %}">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-success">
@@ -20,13 +20,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#"><span class="fa fa-home"></span> Home</a>
+              <a class="nav-link" href="{% url 'user_home' %}"><span class="fa fa-home"></span> Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"><span class="fa fa-cubes"></span> Grocery</a>
+                <a class="nav-link" href="{% url 'grocery' %}"><span class="fa fa-cubes"></span> Grocery</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"><span class="fa fa-medkit"></span> Medicine</a>
+                <a class="nav-link" href="{% url 'medicine' %}"><span class="fa fa-medkit"></span> Medicine</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">

@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin</title>
+    <title>Medicine Table</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="{% static 'css/gshop/admin_home__.css' %}">
+    <link rel="stylesheet" href="{% static 'css/gshop/medicine_table.css' %}">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-info">
@@ -47,71 +47,44 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-xs-12 col-lg-12">
-                <h2 class="heading"><span class="fa fa-user"></span> Admin Dashboard</h2>
+                <h1 class="heading">Medicine Details</h1>
                 <hr>
             </div>
 
-            <div class="col-xs-3 col-lg-3">
-                <div class="grid1">
-                    <img src="{% static 'images/gshop_admin/users.png' %}" class="grid-icon">
-                    <h3 class="grid-title">Users</h3>
-                    <div class="n-link">
-                        <center><a href="{% url 'user_table' %}" class="link">View Details  <span class="fa fa-arrow-right"></span></a></center>
-                    </div>
-                </div>
+            <div class="col-xs-2 col-lg-2"></div>
+
+            <div class="col-xs-8 col-lg-8">
+                <table border="2">
+                    <tr class="table table-danger">
+                        <th>Medicine Id</th>
+                        <th>Medicine Name</th>
+                        <th>Medicine Description</th>
+                        <th>Medicine Price</th>
+                        <th>Medicine Image</th>
+                        <th>Add</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                    </tr>
+
+                    {% for i in medicine %}
+
+                    <tr>
+                        <td>{{i.id}}</td>
+                        <td>{{i.name}}</td>
+                        <td>{{i.description}}</td>
+                        <td>{{i.price}}</td>
+                        <td><img src="/media/{{i.image}}" width="100px"></td>
+                        <td><a href="{% url 'medicine_add' %}" class="btn btn-primary">Add</a></td>
+                        <td><a href="{% url 'medicine_update' i.id %}" class="btn btn-success">Update</a></td>
+                        <td><a href="{% url 'medicine_delete' i.id  %}" class="btn btn-danger">Delete</a></td>
+                    </tr>
+
+                    {% endfor %}
+
+                </table>
             </div>
 
-            <div class="col-xs-3 col-lg-3">
-                <div class="grid3">
-                    <img src="{% static 'images/gshop_admin/products.png' %}" class="grid-icon">
-                    <h3 class="grid-title">Grocery</h3>
-                    <div class="n-link">
-                        <center><a href="{% url 'grocery_table' %}" class="link">View Details  <span class="fa fa-arrow-right"></span></a></center>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xs-3 col-lg-3">
-                <div class="grid7">
-                    <img src="{% static 'images/gshop_admin/medicine.png' %}" class="grid-icon">
-                    <h3 class="grid-title">Medicine</h3>
-                    <div class="n-link">
-                        <center><a href="{% url 'medicine_table' %}" class="link">View Details  <span class="fa fa-arrow-right"></span></a></center>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="col-xs-3 col-lg-3">
-                <div class="grid4">
-                    <img src="{% static 'images/gshop_admin/orders.png' %}" class="grid-icon">
-                    <h3 class="grid-title">Orders</h3>
-                    <div class="n-link">
-                        <center><a href="" class="link">View Details  <span class="fa fa-arrow-right"></span></a></center>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="col-xs-3 col-lg-3">
-                <div class="grid5">
-                    <img src="{% static 'images/gshop_admin/contact.png' %}" class="grid-icon">
-                    <h3 class="grid-title">Contact Details</h3>
-                    <div class="n-link">
-                        <center><a href="{% url 'contact_table' %}" class="link">View Details  <span class="fa fa-arrow-right"></span></a></center>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xs-3 col-lg-3">
-                <div class="grid6">
-                    <img src="{% static 'images/gshop_admin/message.png' %}" class="grid-icon">
-                    <h3 class="grid-title">Sent Message</h3>
-                    <div class="n-link">
-                        <center><a href="" class="link">View Details  <span class="fa fa-arrow-right"></span></a></center>
-                    </div>
-                </div>
-            </div>
+            <div class="col-xs-2 col-lg-2"></div>
         </div>
     </div>
 
