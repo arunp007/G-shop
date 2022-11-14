@@ -8,7 +8,7 @@
     <title>Grocery</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="{% static 'css/gshop/user_home__.css' %}">
+    <link rel="stylesheet" href="{% static 'css/gshop/user_home___.css' %}">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-success">
@@ -88,7 +88,7 @@
                     <div class="card-body">
                       <h5 class="card-title">{{i.name}}</h5>
                       <p class="card-text">{{i.description}}</p>
-                      <label class="card-price">{{i.price}}</label>
+                      <label class="card-price">₹ {{i.price}}</label>
                       <a href="#" class="btn btn-success">Buy Now</a>
                     </div>
                 </div>
