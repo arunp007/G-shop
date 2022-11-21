@@ -100,3 +100,6 @@ def user_login(request):
 def user_logout(request):
     request.session.flush()
     return render(request, 'login_user.html')
+
+def error(request):
+    return render(request, 'error.html')
