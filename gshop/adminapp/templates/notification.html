@@ -5,14 +5,102 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Medicine Table</title>
+    <title>Notifications</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="{% static 'css/gshop/medicine_table.css' %}">
+    <style>
+        .nav-link{
+            font-size: 23px;
+            font-weight: bolder;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .dropdown-menu{
+            background-color: black;
+            width: 300px;
+            height: 300px;
+            border-radius: 10px;
+        }
+
+        .dropdown-item{
+            color: white;
+            font-size: 20px;
+        }
+
+        .dropdown-item:hover{
+            background-color: chartreuse;
+        }
+
+        .btn-dark{
+            border-radius: 100px;
+            width: 120px;
+        }
+
+        .btn-dark:hover{
+            background-color: red;
+            border: red;
+        }
+
+        .container-fluid{
+            margin-top: 200px;
+        }
+
+        .heading{
+            color: green;
+            font-weight: bolder;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 50px;
+        }
+
+        .grid{
+            background-color: darkslategrey;
+            color: white;
+            font-size: 18px;
+            margin-top: 50px;
+            height: 200px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+            border-radius: 10px;
+        }
+
+
+        .footer{
+            background-color: rgb(11, 11, 13);
+            color: white;
+            margin-top: 100px;
+        }
+
+        .logo{
+            width: 130px;
+            margin-top: 50px;
+            padding-bottom: 100px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+
+        .footer-heading{
+            color: grey;
+            margin-top: 50px;
+            font-weight: lighter;
+            margin-left: 20px;
+        }
+
+        .footer-link{
+            margin-left: 20px;
+            color: white;
+        }
+
+        .footer-link:hover{
+            color: white;
+        }
+    </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-info">
-        <a class="navbar-brand" href="#"><img src="{% static 'images/gshop_admin/gshop_logo.png' %}" width="120px"></a>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-success">
+        <a class="navbar-brand" href="#"><img src="{% static 'images/gshop_user/gshop_logo.png' %}" width="120px"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -20,26 +108,20 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'admin_home' %}"><span class="fa fa-dashboard"></span> Dashboard</a>
-            </li>
-            <li class="nav-item dropdown active">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-                <span class="fa fa-eye"></span> View
-              </a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="{% url 'user_table' %}"><span class="fa fa-user"></span> Users</a>
-                <a class="dropdown-item" href="{% url 'grocery_table' %}"><span class="fa fa-cubes"></span> Grocery</a>
-                <a class="dropdown-item" href="{% url 'medicine_table' %}"><span class="fa fa-medkit"></span> Medicine</a>
-                <a class="dropdown-item" href="#"><span class="fa fa-gift"></span> Orders</a>
-                <a class="dropdown-item" href="{% url 'contact_table' %}"><span class="fa fa-phone"></span> Info Details</a>
-              </div>
+              <a class="nav-link" href="{% url 'user_home' %}"><span class="fa fa-home"></span> Home</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="{% url 'grocery' %}"><span class="fa fa-cubes"></span> Grocery</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'medicine' %}"><span class="fa fa-medkit"></span> Medicine</a>
+            </li>
+            <li class="nav-item active">
               <a class="nav-link" href="{% url 'notification' %}"><span class="fa fa-bell"></span> Notifications</a>
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
-            <a class="btn btn-dark my-2 my-sm-0" type="submit" href="{% url 'admin_logout' %}">Logout</a>
+            <a class="btn btn-dark my-2 my-sm-0" type="submit" href="{% url 'user_logout' %}">Logout</a>
           </form>
         </div>
     </nav>
@@ -47,46 +129,29 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-xs-12 col-lg-12">
-                <h1 class="heading">Medicine Details</h1>
+                <h1 class="heading">Notifications</h1>
                 <hr>
             </div>
 
             <div class="col-xs-2 col-lg-2"></div>
 
             <div class="col-xs-8 col-lg-8">
-                <table border="2">
-                    <tr class="table table-danger">
-                        <th>Medicine Id</th>
-                        <th>Medicine Name</th>
-                        <th>Medicine Description</th>
-                        <th>Medicine Price</th>
-                        <th>Medicine Image</th>
-                        <th>Add</th>
-                        <th>Update</th>
-                        <th>Delete</th>
-                    </tr>
 
-                    {% for i in medicine %}
+                {% for i in message %}
 
-                    <tr>
-                        <td>{{i.id}}</td>
-                        <td>{{i.name}}</td>
-                        <td>{{i.description}}</td>
-                        <td>{{i.price}}</td>
-                        <td><img src="/media/{{i.image}}" width="100px"></td>
-                        <td><a href="{% url 'medicine_add' %}" class="btn btn-primary">Add</a></td>
-                        <td><a href="{% url 'medicine_update' i.id %}" class="btn btn-success">Update</a></td>
-                        <td><a href="{% url 'medicine_delete' i.id  %}" class="btn btn-danger">Delete</a></td>
-                    </tr>
+                <div class="grid">
+                    <p>{{i.message}}</p>
+                </div>
 
-                    {% endfor %}
+                {% endfor %}
 
-                </table>
             </div>
 
             <div class="col-xs-2 col-lg-2"></div>
         </div>
     </div>
+
+    
 
     <div class="footer">
         <div class="row">

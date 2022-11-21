@@ -86,3 +86,37 @@ def grocery(request):
 def medicine(request):
     medicine_data = Medicine.objects.all()
     return render(request, 'medicine.html', {'medicine': medicine_data})
+
+def order_now(request):
+    if request.method == 'POST':
+        pdt_name = request.POST['product_name']
+        pdt_quantity = request.POST['product_quantity']
+        name = request.POST['name']
+        phone = request.POST['phone']
+        address = request.POST['address']
+        order_data = Orders(product_name = pdt_name, product_quantity = pdt_quantity, name = name, phone = phone, address = address)
+        order_data.save()
+        return redirect('order_success')
+    return render(request, 'order_now.html')
+
+def order_success(request):
+    return render(request, 'order_success.html')
+
+def order_table(request):
+    order_details = Orders.objects.all()
+    return render(request, 'order_table.html', {'order': order_details})
+
+def order_delete(request, id):
+    Orders.objects.get(id = id).delete()
+    return redirect('order_table')
+
+def message(request):
+    if request.method == 'POST':
+        message = request.POST['message']
+        message_details = Message(message = message)
+        message_details.save()
+    return render(request, 'message.html')
+
+def notification(request):
+    message_data = Message.objects.all()
+    return render(request, 'notification.html', {'message': message_data})

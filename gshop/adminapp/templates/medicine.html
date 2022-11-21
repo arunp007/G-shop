@@ -28,14 +28,6 @@
             <li class="nav-item active">
                 <a class="nav-link" href="{% url 'medicine' %}"><span class="fa fa-medkit"></span> Medicine</a>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-                <span class="fa fa-eye"></span> View
-              </a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="#"><span class="fa fa-gift"></span>  Orders</a>
-              </div>
-            </li>
             <li class="nav-item">
               <a class="nav-link" href=""><span class="fa fa-bell"></span> Notifications</a>
             </li>
@@ -83,7 +75,7 @@
                       <h5 class="card-title">{{i.name}}</h5>
                       <p class="card-text">{{i.description}}</p>
                       <label class="card-price">{{i.price}}</label>
-                      <a href="#" class="btn btn-success">Buy Now</a>
+                      <a href="{% url 'order_now' %}" class="btn btn-success">Buy Now</a>
                     </div>
                 </div>
             </div>

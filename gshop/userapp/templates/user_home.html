@@ -28,16 +28,8 @@
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'medicine' %}"><span class="fa fa-medkit"></span> Medicine</a>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-                <span class="fa fa-eye"></span> View
-              </a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="#"><span class="fa fa-gift"></span>  Orders</a>
-              </div>
-            </li>
             <li class="nav-item">
-              <a class="nav-link" href=""><span class="fa fa-bell"></span> Notifications</a>
+              <a class="nav-link" href="{% url 'notification' %}"><span class="fa fa-bell"></span> Notifications</a>
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
@@ -91,7 +83,7 @@
                     <h4 class="product-title">Broccoli</h4>
                     <p class="product-weight">Net Wt: 200gm</p>
                     <label class="product-price1"><span class="fa fa-rupee"></span> <strike>150</strike></label><br> <label class="product-price2"><span class="fa fa-rupee"></span> 119</label>
-                    <a href="{% url 'grocery' %}" class="btn btn-success" type="button">Buy Now</a>
+                    <a href="{% url 'order_now' %}" class="btn btn-success" type="button">Buy Now</a>
                 </div>
             </div>
 
@@ -102,7 +94,7 @@
                     <h4 class="product-title">Capsicum</h4>
                     <p class="product-weight">Net Wt: 1kg</p>
                     <label class="product-price1"><span class="fa fa-rupee"></span> <strike>120</strike></label><br> <label class="product-price2"><span class="fa fa-rupee"></span> 100</label>
-                    <a href="{% url 'grocery' %}" class="btn btn-success" type="button">Buy Now</a>
+                    <a href="{% url 'order_now' %}" class="btn btn-success" type="button">Buy Now</a>
                 </div>
             </div>
 
@@ -113,7 +105,7 @@
                     <h4 class="product-title">Banana Nendran</h4>
                     <p class="product-weight">Net Wt: 1kg</p>
                     <label class="product-price1"><span class="fa fa-rupee"></span> <strike>100</strike></label><br> <label class="product-price2"><span class="fa fa-rupee"></span> 80</label>
-                    <a href="{% url 'grocery' %}" class="btn btn-success" type="button">Buy Now</a>
+                    <a href="{% url 'order_now' %}" class="btn btn-success" type="button">Buy Now</a>
                 </div>
             </div>
 
@@ -124,7 +116,7 @@
                     <h4 class="product-title">White Rice</h4>
                     <p class="product-weight">Net Wt: 1kg</p>
                     <label class="product-price1"><span class="fa fa-rupee"></span> <strike>100</strike></label><br> <label class="product-price2"><span class="fa fa-rupee"></span> 80</label>
-                    <a href="{% url 'grocery' %}" class="btn btn-success" type="button">Buy Now</a>
+                    <a href="{% url 'order_now' %}" class="btn btn-success" type="button">Buy Now</a>
                 </div>
             </div>
 

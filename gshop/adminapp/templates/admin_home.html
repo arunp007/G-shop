@@ -30,8 +30,9 @@
                 <a class="dropdown-item" href="{% url 'user_table' %}"><span class="fa fa-user"></span> Users</a>
                 <a class="dropdown-item" href="{% url 'grocery_table' %}"><span class="fa fa-cubes"></span> Grocery</a>
                 <a class="dropdown-item" href="{% url 'medicine_table' %}"><span class="fa fa-medkit"></span> Medicine</a>
-                <a class="dropdown-item" href="#"><span class="fa fa-gift"></span> Orders</a>
-                <a class="dropdown-item" href="{% url 'contact_table' %}"><span class="fa fa-phone"></span> Info Details</a>
+                <a class="dropdown-item" href="{% url 'order_table' %}"><span class="fa fa-gift"></span> Orders</a>
+                <a class="dropdown-item" href="{% url 'contact_table' %}"><span class="fa fa-phone"></span> Contact Details</a>
+                <a class="dropdown-item" href="{% url 'message' %}"><span class="fa fa-envelope"></span>  Sent Message</a>
               </div>
             </li>
             <li class="nav-item">
@@ -87,7 +88,7 @@
                     <img src="{% static 'images/gshop_admin/orders.png' %}" class="grid-icon">
                     <h3 class="grid-title">Orders</h3>
                     <div class="n-link">
-                        <center><a href="" class="link">View Details  <span class="fa fa-arrow-right"></span></a></center>
+                        <center><a href="{% url 'order_table' %}" class="link">View Details  <span class="fa fa-arrow-right"></span></a></center>
                     </div>
                 </div>
             </div>
@@ -108,7 +109,7 @@
                     <img src="{% static 'images/gshop_admin/message.png' %}" class="grid-icon">
                     <h3 class="grid-title">Sent Message</h3>
                     <div class="n-link">
-                        <center><a href="" class="link">View Details  <span class="fa fa-arrow-right"></span></a></center>
+                        <center><a href="{% url 'message' %}" class="link">View Details  <span class="fa fa-arrow-right"></span></a></center>
                     </div>
                 </div>
             </div>

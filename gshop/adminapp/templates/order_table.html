@@ -5,10 +5,90 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Medicine Table</title>
+    <title>Grocery Table</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="{% static 'css/gshop/medicine_table.css' %}">
+    <style>
+        .nav-link{
+            font-size: 23px;
+            font-weight: bolder;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .dropdown-menu{
+            background-color: black;
+            width: 300px;
+            height: 300px;
+            border-radius: 10px;
+        }
+
+        .dropdown-item{
+            color: white;
+            font-size: 20px;
+        }
+
+        .dropdown-item:hover{
+            background-color: chartreuse;
+        }
+
+        .btn-dark{
+            border-radius: 100px;
+            width: 120px;
+        }
+
+        .btn-dark:hover{
+            background-color: red;
+            border: red;
+        }
+
+        .heading{
+            color: darkgreen;
+            font-weight: bolder;
+            margin-top: 200px;
+            margin-bottom: 20px;
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+        }
+
+        hr{
+            margin-bottom: 100px;
+        }
+
+        table{
+            margin-bottom: 100px;
+        }
+
+        .footer{
+            background-color: rgb(27, 19, 51);
+            color: white;
+            margin-top: 100px;
+        }
+
+        .logo{
+            width: 130px;
+            margin-top: 50px;
+            padding-bottom: 100px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+
+        .footer-heading{
+            color: grey;
+            margin-top: 50px;
+            font-weight: lighter;
+            margin-left: 20px;
+        }
+
+        .footer-link{
+            margin-left: 20px;
+            color: white;
+        }
+
+        .footer-link:hover{
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-info">
@@ -30,12 +110,12 @@
                 <a class="dropdown-item" href="{% url 'user_table' %}"><span class="fa fa-user"></span> Users</a>
                 <a class="dropdown-item" href="{% url 'grocery_table' %}"><span class="fa fa-cubes"></span> Grocery</a>
                 <a class="dropdown-item" href="{% url 'medicine_table' %}"><span class="fa fa-medkit"></span> Medicine</a>
-                <a class="dropdown-item" href="#"><span class="fa fa-gift"></span> Orders</a>
+                <a class="dropdown-item" href="{% url 'order_table' %}"><span class="fa fa-gift"></span> Orders</a>
                 <a class="dropdown-item" href="{% url 'contact_table' %}"><span class="fa fa-phone"></span> Info Details</a>
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'notification' %}"><span class="fa fa-bell"></span> Notifications</a>
+              <a class="nav-link" href=""><span class="fa fa-bell"></span> Notifications</a>
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
@@ -47,46 +127,44 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-xs-12 col-lg-12">
-                <h1 class="heading">Medicine Details</h1>
+                <h1 class="heading">Order Details</h1>
                 <hr>
             </div>
-
+            
             <div class="col-xs-2 col-lg-2"></div>
 
             <div class="col-xs-8 col-lg-8">
                 <table border="2">
-                    <tr class="table table-danger">
-                        <th>Medicine Id</th>
-                        <th>Medicine Name</th>
-                        <th>Medicine Description</th>
-                        <th>Medicine Price</th>
-                        <th>Medicine Image</th>
-                        <th>Add</th>
-                        <th>Update</th>
+                    <tr class="table table-success">
+                        <th>Order Id</th>
+                        <th>Product Name</th>
+                        <th>Product Quantity</th>
+                        <th>Buyer Name</th>
+                        <th>Phone Number</th>
+                        <th>Address</th>
                         <th>Delete</th>
                     </tr>
 
-                    {% for i in medicine %}
+                    {% for i in order %}
 
                     <tr>
                         <td>{{i.id}}</td>
+                        <td>{{i.product_name}}</td>
+                        <td>{{i.product_quantity}}</td>
                         <td>{{i.name}}</td>
-                        <td>{{i.description}}</td>
-                        <td>{{i.price}}</td>
-                        <td><img src="/media/{{i.image}}" width="100px"></td>
-                        <td><a href="{% url 'medicine_add' %}" class="btn btn-primary">Add</a></td>
-                        <td><a href="{% url 'medicine_update' i.id %}" class="btn btn-success">Update</a></td>
-                        <td><a href="{% url 'medicine_delete' i.id  %}" class="btn btn-danger">Delete</a></td>
+                        <td>{{i.phone}}</td>
+                        <td>{{i.address}}</td>
+                        <td><a href="{% url 'order_delete' i.id %}" class="btn btn-danger">Delete</a></td>
                     </tr>
 
                     {% endfor %}
-
                 </table>
             </div>
 
             <div class="col-xs-2 col-lg-2"></div>
         </div>
     </div>
+    
 
     <div class="footer">
         <div class="row">
