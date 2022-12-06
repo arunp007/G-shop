@@ -1,0 +1,56 @@
+.container-fluid{
+    background-color:bisque;
+    padding-bottom: 200px;
+}
+
+.logo{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 150px;
+}
+
+form{
+    background-color: white;
+    padding-left: 40px;
+    padding-bottom: 40px;
+    padding-right: 40px;
+    padding-top: 40px;
+    border-radius: 10px;
+}
+
+.heading{
+    text-align: center;
+    color: grey;
+    font-weight: bolder;
+}
+
+.heading2{
+    text-align: center;
+    color: grey;
+    font-weight: bolder;
+    margin-top: 30px;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.form-control{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.btn-success{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.btn-primary{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
